@@ -8,6 +8,7 @@ import { WaterComponent } from './views/recursos/water/water.component';
 import { GasComponent } from './views/recursos/gas/gas.component';
 import { PowerComponent } from './views/recursos/power/power.component';
 import { LoginComponent } from './views/login/login.component';
+import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { LoginComponent } from './views/login/login.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

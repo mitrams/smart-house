@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-
+    
+    login() {
+        throw new Error('Method not implemented.');
+    }
 }
