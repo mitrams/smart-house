@@ -7,6 +7,7 @@ import { RecursosComponent } from './views/recursos/recursos.component';
 import { WaterComponent } from './views/recursos/water/water.component';
 import { GasComponent } from './views/recursos/gas/gas.component';
 import { PowerComponent } from './views/recursos/power/power.component';
+import { LoginComponent } from './views/login/login.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { PowerComponent } from './views/recursos/power/power.component';
     WaterComponent,
     GasComponent,
     PowerComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
