@@ -1,0 +1,47 @@
+<div>
+
+    <div id="calendar">
+        <div (click)="selectDay(0)">Domingo</div>
+        <div (click)="selectDay(1)">Segunda-Feira</div>
+        <div (click)="selectDay(2)">Terça-Feira</div>
+        <div (click)="selectDay(3)">Quarta-Feira</div>
+        <div (click)="selectDay(4)">Quinta-Feira</div>
+        <div (click)="selectDay(5)">Sexta-Feira</div>
+        <div (click)="selectDay(6)">Sábado</div>
+        <div (click)="selectDay(7)">Futuro</div>
+        <div>{{ tasks[0].length > 0? tasks[0].length : 0 }}</div>
+        <div>{{ tasks[1].length > 0? tasks[1].length : 0 }}</div>
+        <div>{{ tasks[2].length > 0? tasks[2].length : 0 }}</div>
+        <div>{{ tasks[3].length > 0? tasks[3].length : 0 }}</div>
+        <div>{{ tasks[4].length > 0? tasks[4].length : 0 }}</div>
+        <div>{{ tasks[5].length > 0? tasks[5].length : 0 }}</div>
+        <div>{{ tasks[6].length > 0? tasks[6].length : 0 }}</div>
+        <div>{{ tasks[7].length > 0? tasks[7].length : 0 }}</div>
+
+    </div>
+
+    <div id="tasks-for-selected-day">
+        <h2 *ngIf="selectedTasks == null">Escolhe um dia e revê as tuas tarefas</h2>
+        <h2 *ngIf="selectedTasks?.length == 0">Escolhe outro dia e revê as tuas tarefas</h2>
+        <div *ngIf="!(selectedTasks == null)">
+            <div id="add-remove-btns">
+                <button (click)="addTask()"><strong>+</strong> Adicionar tarefa </button>
+                <button [disabled]="selectedTasks?.length == 0" (click)="removeAllSelectedTasks()">Eliminar todas as tarefas</button>
+            </div>
+            <div id="new-task-inputs">
+                <input type="text" name="" id="task-input" placeholder="Título">
+                <input type="number" max="23" id="hour-input" placeholder="Hora">
+            </div>
+
+            <ul>
+                <li class="task" *ngFor="let task of selectedTasks ">
+                    <p>{{task[0]}} {{task[1] > 1? 'às':'à'}} {{task[1] == 24? 0 : task[1]}}h</p>
+                    <button (click)="removeTask(task)">X</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+</div>

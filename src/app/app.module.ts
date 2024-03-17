@@ -10,6 +10,7 @@ import { PowerComponent } from './views/recursos/power/power.component';
 import { LoginComponent } from './views/login/login.component';
 import { AuthGuard } from './guards/auth.guard';
 import { HomeComponent } from './views/home/home.component';
+import { ScheduleComponent } from './views/schedule/schedule.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { HomeComponent } from './views/home/home.component';
     PowerComponent,
     LoginComponent,
     HomeComponent,
+    ScheduleComponent,
   ],
   imports: [
     BrowserModule,

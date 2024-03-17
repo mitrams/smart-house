@@ -7,6 +7,7 @@ import { GasComponent } from './views/recursos/gas/gas.component';
 import { LoginComponent } from './views/login/login.component';
 import { AuthGuard } from './guards/auth.guard';
 import { HomeComponent } from './views/home/home.component';
+import { ScheduleComponent } from './views/schedule/schedule.component';
 
 
 const routes: Routes = [
@@ -38,6 +39,10 @@ const routes: Routes = [
         path: "recursos/gas",
         component: GasComponent,
         canActivate: [AuthGuard],
+    },
+    {
+        path: "calendario",
+        component: ScheduleComponent,
     }
 ];
 
