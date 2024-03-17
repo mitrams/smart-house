@@ -7,4 +7,22 @@ import { Component } from '@angular/core';
 })
 export class GasComponent {
 
+
+    hiredPower = 10.35;
+
+    gasSpent = 112.23; // average gas spent/month/person in kWh
+
+    calculatePricePerMonth(powerSpent?: number) {
+        
+        return this.calculatePricePerDay() * 30;
+    }
+
+    calculatePricePerWeek(){
+        return this.calculatePricePerDay() * 7;
+    }
+
+    calculatePricePerDay() {
+        return 0.0739 + this.gasSpent/30 * 0.1127;
+    }
+
 }

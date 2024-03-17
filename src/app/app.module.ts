@@ -11,6 +11,7 @@ import { LoginComponent } from './views/login/login.component';
 import { AuthGuard } from './guards/auth.guard';
 import { HomeComponent } from './views/home/home.component';
 import { ScheduleComponent } from './views/schedule/schedule.component';
+import { EcofootprintComponent } from './ecofootprint/ecofootprint.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ScheduleComponent } from './views/schedule/schedule.component';
     LoginComponent,
     HomeComponent,
     ScheduleComponent,
+    EcofootprintComponent,
   ],
   imports: [
     BrowserModule,

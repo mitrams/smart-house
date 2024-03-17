@@ -1,11 +1,15 @@
 <div id="temperatures">
     <div id="currentTemperature">
         <h3>Current Temperature</h3>
-        <h3 id="currentTemperatureValue">15Cº</h3>
+        <h3><span id="currentTemperatureValue">15</span>Cº</h3>
     </div>
     <div id="chosenTemperature">
         <h3>Your chosen Temperature</h3>
-        <h3><input type="number" placeholder="21" [defaultValue]="21" max="40" min="0">Cº</h3>
+        <h3><input id="chosenTemperatureInput" type="number" placeholder="21" [defaultValue]="21" max="40" min="0">Cº</h3>
+    </div>
+    <div>
+        <button (click)="calculateHeatingCost()">Calcular custos de aquecimento</button>
+        <span id="heatingCost">{{ heatingPrice }}</span>
     </div>
 </div>
 
@@ -15,7 +19,7 @@
     <form action="" method="post" id="consumptionForm">
         <div class="consumptionInput">
             <label for="resourceType">Tipo de consumo</label>
-            <select name="resourceType" [disabled]="loading">
+            <select name="resourceType" [disabled]="loading" id="resourceType">
                 <option value="water">Água</option>
                 <option value="power">Eletricidade</option>
                 <option value="gas">Gás</option>
@@ -23,11 +27,11 @@
         </div>
         <div class="consumptionInput">
             <label for="quantity">Quantidade</label>
-            <input type="number" name="quantity" id="" [disabled]="loading">
+            <input type="number" name="quantity" id="quantity" [disabled]="loading">
         </div>
         <div class="consumptionInput">
             <label for="atHomeCheckBox">Enquanto estava em casa</label>
-            <select name="atHomeCheckBox" [disabled]="loading">
+            <select name="atHomeCheckBox" [disabled]="loading" id="atHome">
                 <option value="atHome">Sim</option>
                 <option value="shortAway">Não, por pouco tempo</option>
                 <option value="longAway">Não, por bastante tempo</option>

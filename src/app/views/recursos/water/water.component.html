@@ -1,9 +1,19 @@
-<h1>Água</h1>
+<h1 style="font-size: xx-large; font-weight: bolder;">Água</h1>
 
 <div>
     <div>
         <h3>Consumo</h3>
-    
-        <!-- TODO add graphics -->
+        <div class="graph-container">
+            <h4>Mensal</h4>
+            {{ this.calculatePricePerMonth() }} €
+        </div>
+        <div class="graph-container">
+            <h4>Semanal</h4>
+            {{ this.calculatePricePerWeek() }} €
+        </div>
+        <div class="graph-container">
+            <h4>Diario</h4>
+            {{ this.calculatePricePerDay() }} €
+        </div>
     </div>
 </div>
