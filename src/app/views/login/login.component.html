@@ -1,10 +1,16 @@
-<div>
-    <form action="">
-
-        <input type="email" id="input-email"/>
-        <input type="password" id="input-password">
-        <button type="submit" (click)="login()">
-            
-        </button>
-    </form>
+<div id="login-body">
+    <div id="login-card">
+        <div id="login-header">
+            <h1>Autenticação</h1>
+            <p>Autentique-se antes de prosseguir</p>
+        </div>
+        
+        <form action="">
+            <input #inpute_email type="email" id="input-email"/>
+            <input type="password" id="input-password">
+            <button type="submit" (click)="login($event)">
+                Confirmar
+            </button>
+        </form>
+    </div>
 </div>
