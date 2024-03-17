@@ -95,12 +95,12 @@ export enum GasTiers {
     tier3 = 0.193, // 5-8 people // consumption 729.46 kwh
     tier4 = 0.20 // 9+ people // consumption 1010.03 kwh
 }
-export enum GasEnergy {
-    tier1 = 0.1127,
-    tier2 = 0.1082,
-    tier3 = 0.1065,
-    tier4 = 0.1055
 
+export enum GasConsumption {
+    tier1 = 0.42,
+    tier2 = 1.21,
+    tier3 = 2.59,
+    tier4 = 3.55
 }
 export interface Gas {
     id: string;
