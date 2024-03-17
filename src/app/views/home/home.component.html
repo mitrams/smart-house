@@ -1,1 +1,42 @@
-<p>home works!</p>
+<div id="temperatures">
+    <div id="currentTemperature">
+        <h3>Current Temperature</h3>
+        <h3 id="currentTemperatureValue">15Cº</h3>
+    </div>
+    <div id="chosenTemperature">
+        <h3>Your chosen Temperature</h3>
+        <h3><input type="number" placeholder="21" [defaultValue]="21" max="40" min="0">Cº</h3>
+    </div>
+</div>
+
+<div>
+    <h2>Registo de consumo</h2>
+
+    <form action="" method="post" id="consumptionForm">
+        <div class="consumptionInput">
+            <label for="resourceType">Tipo de consumo</label>
+            <select name="resourceType" [disabled]="loading">
+                <option value="water">Água</option>
+                <option value="power">Eletricidade</option>
+                <option value="gas">Gás</option>
+            </select>
+        </div>
+        <div class="consumptionInput">
+            <label for="quantity">Quantidade</label>
+            <input type="number" name="quantity" id="" [disabled]="loading">
+        </div>
+        <div class="consumptionInput">
+            <label for="atHomeCheckBox">Enquanto estava em casa</label>
+            <select name="atHomeCheckBox" [disabled]="loading">
+                <option value="atHome">Sim</option>
+                <option value="shortAway">Não, por pouco tempo</option>
+                <option value="longAway">Não, por bastante tempo</option>
+            </select>
+        </div>
+        
+        <button (click)="submit($event.target)" [disabled]="loading">
+            Confirmar
+        </button>
+
+    </form>
+</div>

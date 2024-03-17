@@ -1,0 +1,71 @@
+#temperatures {
+    padding: 1em;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#temperatures > * {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+
+}
+
+#currentTemperatureValue {
+    padding: 0.2em;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#chosenTemperature input[type="number"] {
+    font-size: large;
+    width: 3em;
+}
+
+:host {
+    width: 60%;
+    margin-inline: auto;
+    padding: 1em;
+    overflow: scroll;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+:host > * {
+    border: 1px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#consumptionForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 1em;
+}
+
+.consumptionInput {
+    display: flex;
+    gap: 1em;
+}
+
+.consumptionInput > label {
+    flex-basis: 15em;
+}
+
+.consumptionInput > input, .consumptionInput > select {
+    flex-grow: 1;
+}
