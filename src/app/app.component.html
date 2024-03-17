@@ -1,19 +1,19 @@
 <div id="app-body">
     <nav *ngIf="!isLoginPage()">
-        <a (click)="authService.logout()">Logout</a>
+        <button (click)="authService.logout()">Logout</button>
 
         <h1><a routerLink="/">Home</a></h1>
         <div>
             <h1><a routerLink="/recursos">Recursos</a></h1>
             <ul>
                 <li>
-                    <a routerLink="/recursos/agua">Heroes</a>
+                    <a routerLink="/recursos/agua">Água</a>
                 </li>
                 <li>
-                    <a routerLink="/recursos/eletricidade">Heroes</a>
+                    <a routerLink="/recursos/eletricidade">Eletricidade</a>
                 </li>
                 <li>
-                    <a routerLink="/recursos/gas">Heroes</a>
+                    <a routerLink="/recursos/gas">Gás</a>
                 </li>
             </ul>
         </div>
