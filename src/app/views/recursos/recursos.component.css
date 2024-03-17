@@ -1,0 +1,35 @@
+#resources {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 0.75em;
+}
+
+.resource {
+    border: 2px solid gray;
+    border-radius: 10px;
+    min-height: 10em;
+    padding-inline: 1em;
+    margin-right: 1em;
+}
+
+.resource > h2 {
+    border: 1px solid black;
+}
+
+.resource > h2, .resource > h2 > a {
+    width: fit-content;
+    padding: 0.15em;
+    margin-top: 0.5em;
+    border-radius: 10px;
+}
+
+:host {
+    overflow: scroll;
+    width: 80%;
+}
+
+* {
+    color: black;
+    text-decoration: none;
+}
