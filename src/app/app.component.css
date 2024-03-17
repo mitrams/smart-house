@@ -1,0 +1,21 @@
+#app-body {
+    display: flex;
+    gap: 0 1%;
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    padding: 5em 2em;
+
+    width: 20%;
+
+    background-color: darkblue;
+    color: white;
+    height: 100%;
+}
+
+nav a {
+    color: inherit;
+}

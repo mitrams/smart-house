@@ -6,12 +6,13 @@ import { PowerComponent } from './views/recursos/power/power.component';
 import { GasComponent } from './views/recursos/gas/gas.component';
 import { LoginComponent } from './views/login/login.component';
 import { AuthGuard } from './guards/auth.guard';
+import { HomeComponent } from './views/home/home.component';
 
 
 const routes: Routes = [
     { 
-        path: "", 
-        component: RecursosComponent, 
+        path: "",
+        component: HomeComponent,
         canActivate: [AuthGuard],
     },
     { 
