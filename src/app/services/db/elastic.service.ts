@@ -22,3 +22,21 @@ export async function indexFile<T>(index: string, document: T) {
   })
   console.log(result)
 }
+// id can only be id
+export async function findFile<T>(index: string, id: string) {
+  const result = await client.get({
+    index,
+    id
+  })
+  console.log(result)
+}
+// can find by name
+// export async function findFile<T>(index: string, name: string) {
+//   const result = await client.get({
+//     index,
+//     name
+
+
+//   })
+//   console.log(result)
+// }
