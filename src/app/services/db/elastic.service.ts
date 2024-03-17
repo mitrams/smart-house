@@ -3,17 +3,27 @@ import { Client } from '@elastic/elasticsearch'
 import { estypes } from '@elastic/elasticsearch'
 import { estypesWithBody } from '@elastic/elasticsearch'
 
-const client = new Client({
-  cloud: { id: 'dXMtY2VudHJhbDEuZ2NwLmNsb3VkLmVzLmlvJGQ4NWU1Mzk4ZmM3ZDRlZTI5NWUxYjVjZGFmZTUxM2U2JDgwZmUyN2ZmNjMxNDRmYWU4ZDNiNjYxNjRjY2U1ZGU4' },
-  auth: { apiKey: 'WF9nYlNJNEJSbUVaMXJEbFZjX3M6MUQ2QWk1ZXpTUmE1aE54Q1p4MnJqZw==' }
-})
+export class ESdatabase {
+  client: Client
+  constructor() {
+    this.client = new Client({
+      cloud: { id: 'My_deployment:dXMtY2VudHJhbDEuZ2NwLmNsb3VkLmVzLmlvOjQ0MyRkODVlNTM5OGZjN2Q0ZWUyOTVlMWI1Y2RhZmU1MTNlNiQ4MGZlMjdmZjYzMTQ0ZmFlOGQzYjY2MTY0Y2NlNWRlOA==' },
+      auth: { apiKey: 'WlBndFNJNEJSbUVaMXJEbE5NOWY6TVVEQ0g1QTZTeTY2R0tBMVV6d3NkUQ==' }
+    })
+  }
+  async CheckConn() {
+    const result = await this.client.ping()
+    console.log(result)
+    if (result == true) {
+      console.log('Connected to ElasticSearch')
+    }
 
-@Injectable({
-  providedIn: 'root'
-})
-export class ElasticService {
-
-  constructor() { }
+  }
+  async indexFile<T>(index: string, document: T) {
+    const result = await this.client.index({
+      index,
+      body: document
+    })
+    console.log(result)
+  }
 }
-
-
