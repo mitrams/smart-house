@@ -1,3 +1,4 @@
+
 // generic models
 
 // User model - id, name, email, password, createdAt
