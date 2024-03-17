@@ -24,10 +24,6 @@ export class ScheduleComponent {
         this.tasks[7] = [];
     }
 
-    ngAfterViewInit() {
-        console.log(this.tasks[0])
-    }
-
     selectDay(day: number) {
         
         this.selectedDay = day;
@@ -39,12 +35,9 @@ export class ScheduleComponent {
         const newHour = ((document.querySelector("#hour-input") as HTMLInputElement).value) as unknown as number;
 
         (this.tasks[this.selectedDay] as Array<[string, number]>).push([newTask, newHour]);
-        console.log([newTask, newHour])
-        console.log(this.selectedTasks)
     }
 
     removeTask(task: [string, number]) {
-        console.log(task);
         (this.tasks[this.selectedDay] as Array<[string, number]>).forEach(
             (v, i) => {
                 if (task == v) {

@@ -26,13 +26,7 @@ export class LoginComponent {
     }
 
     login(event: any) {
-        console.log(event);
-
-        console.log(this.email?.value)
-        console.log(this.password?.value)
         this.pim = this.password?.value
-
-        console.log(this.pim)
 
         if (this.email && this.password) {
             this.authService.tryLogin(this.email.value, this.password.value)
