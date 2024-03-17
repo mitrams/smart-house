@@ -12,7 +12,7 @@ export class GasComponent {
 
     gasSpent = 112.23; // average gas spent/month/person in kWh
 
-    calculatePricePerMonth(powerSpent?: number) {
+    public calculatePricePerMonth(powerSpent?: number) {
         
         return this.calculatePricePerDay() * 30;
     }

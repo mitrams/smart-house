@@ -11,7 +11,7 @@ export class WaterComponent {
 
     waterSpent = 0.19; // average power spent/month/person
 
-    calculatePricePerMonth() {
+    public calculatePricePerMonth() {
         return this.calculatePricePerDay() * 30;
     }
 

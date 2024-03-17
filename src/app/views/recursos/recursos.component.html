@@ -4,14 +4,31 @@
 
     <div class="resource">
         <h2><a routerLink="./agua">Água</a></h2>
+        <div>
+            <h4>Custo Mensal</h4>
+            <p>{{ waterc }}€</p>
+        </div>
     </div>
 
     <div class="resource">
         <h2><a routerLink="./eletricidade">Eletricidade</a></h2>
+        <div>
+            <h4>Custo Mensal</h4>
+            <p>{{ powerc }}€</p>
+        </div>
     </div>
 
     <div class="resource">
         <h2><a routerLink="./gas">Gás</a></h2>
+        <div>
+            <h4>Custo Mensal</h4>
+            <p>{{ gasc }}€</p>
+        </div>
+    </div>
+
+    <div class="resource">
+        <h2>Custo Mensal Final</h2>
+        <p>{{ waterc + powerc + gasc }}€</p>
     </div>
 
 </div>

@@ -13,7 +13,7 @@ export class PowerComponent {
 
     powerSpent = 100; // average power spent/month/person
 
-    calculatePricePerMonth(powerSpent?: number) {
+    public calculatePricePerMonth(powerSpent?: number) {
         
         return (powerSpent? powerSpent : this.powerSpent) * 0.1565 + 30 * 0.2459;
     }
